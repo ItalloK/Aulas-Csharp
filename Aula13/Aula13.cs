@@ -25,6 +25,5 @@ class Aula13{
             Resultado = "Reprovado";
         }
         Console.WriteLine("Nota: {0}, Resultado: {1}", Result, Resultado);
-
     }
 }
