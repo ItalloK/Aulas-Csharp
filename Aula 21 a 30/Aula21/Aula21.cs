@@ -14,6 +14,5 @@ class Aula21{
         }while(Senha_Digitada != Senha);
         Console.Clear();
         Console.WriteLine("Senha Correta, Tentativas: {0}", Tentativas);
-
     }
 }
