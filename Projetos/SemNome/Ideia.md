@@ -7,3 +7,5 @@
 4 - Depois de concluido as partes acima, usar o sistema de Score para gerar emprestimo.
 
 5 - Tem Mais...
+
+-> Fazer tudo modularizado, a parte de cadastrar nomes e tudo mais.
