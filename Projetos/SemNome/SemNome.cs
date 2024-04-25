@@ -3,9 +3,10 @@ using System.Globalization;
 using System.Threading.Tasks;
 using Internal;
 
-class SemNome{
+public class SemNome{
 
-    static string[] Nomes = new string[5]{"NULL","NULL","NULL","NULL","NULL"};
+    static string[] Nomes = new string[5]{"Italo","Ana Clara","Bruno","Brenno","Pedro"};
+    static int[] CPFS = new int[5]{123,456,789,098,765};
     static int VetNomeUtilizado = 0;
     static void Main(){
         //Console.Clear();
@@ -15,7 +16,8 @@ class SemNome{
         do{
             Console.WriteLine("1 - Cadastro.");
             Console.WriteLine("2 - Listar Cadastros.");
-            Console.WriteLine("3 - Encerrar Programa.");
+            Console.WriteLine("3 - Procurar por CPF.");
+            Console.WriteLine("4 - Encerrar Programa.");
             Console.Write("Digite a opção desejada: ");
             Opcao = int.Parse(Console.ReadLine());
         }while(Opcao < 1 || Opcao > 3);
@@ -34,6 +36,10 @@ class SemNome{
                 break;
             }
             case 3:{
+                ProcurarPessoa();
+                break;
+            }
+            case 4:{
                 Console.Clear();
                 Console.WriteLine("Encerrando Programa.");
                 Environment.Exit(0);
@@ -70,6 +76,29 @@ class SemNome{
         Console.WriteLine("Nomes Cadastrados: ");
         foreach(string n in Nomes){
             Console.WriteLine(n);
+        }
+        char Cond;
+        Console.WriteLine("Deseja voltar para o menu principal? [S/N]");
+        Cond = char.Parse(Console.ReadLine());
+        if(Cond == 'S' || Cond == 's'){
+            Console.WriteLine("Voltando para menu principal.");
+            Main();
+        }else{
+            Console.Clear();
+            Console.WriteLine("Encerrando programa.");
+            Environment.Exit(0);
+        }
+    }
+    static void ProcurarPessoa(){
+        Console.Clear();
+        int CPF;
+        Console.Write("Digite o CPF que deseja procurar: ");
+        CPF = int.Parse(Console.ReadLine());
+        int Indice = Array.IndexOf(CPFS, CPF);
+        if(Indice != -1){
+            Console.WriteLine("\nO CPF '{0}' foi encontrado no indice {1} o nome é: {2}", CPF, Indice, Nomes[Indice]);
+        }else{
+            Console.WriteLine("\nO CPF não foi encontrado.");
         }
         char Cond;
         Console.WriteLine("Deseja voltar para o menu principal? [S/N]");
