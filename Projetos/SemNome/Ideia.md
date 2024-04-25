@@ -9,3 +9,7 @@
 5 - Tem Mais...
 
 -> Fazer tudo modularizado, a parte de cadastrar nomes e tudo mais.
+
+6 - Definidos como NULL para verificar na hora de salvar os dados.
+
+7 - Antes de salvar o cadastro, verificar o vetor e ver qual tem " null " e salvar naquela posição.

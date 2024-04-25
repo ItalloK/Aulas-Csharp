@@ -5,7 +5,7 @@ using Internal;
 
 class SemNome{
 
-    static string[] Nomes = new string[5];
+    static string[] Nomes = new string[5]{"NULL","NULL","NULL","NULL","NULL"};
     static int VetNomeUtilizado = 0;
     static void Main(){
         //Console.Clear();
