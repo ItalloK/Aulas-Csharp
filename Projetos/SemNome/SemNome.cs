@@ -68,9 +68,7 @@ public class SemNome{
                 Main();
             }
         }
-
     }
-    
     static void ListarCadastros(){
         Console.Clear();
         Console.WriteLine("Nomes Cadastrados: ");
