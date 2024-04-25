@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Internal;
 
@@ -17,10 +18,11 @@ public class SemNome{
             Console.WriteLine("1 - Cadastro.");
             Console.WriteLine("2 - Listar Cadastros.");
             Console.WriteLine("3 - Procurar por CPF.");
-            Console.WriteLine("4 - Encerrar Programa.");
+            Console.WriteLine("4 - Deletar Cadastro.");
+            Console.WriteLine("5 - Encerrar Programa.");
             Console.Write("Digite a opção desejada: ");
             Opcao = int.Parse(Console.ReadLine());
-        }while(Opcao < 1 || Opcao > 3);
+        }while(Opcao < 1 || Opcao > 5);
         switch(Opcao){
             case 1:{
                 if(VetNomeUtilizado >= Nomes.Length){
@@ -40,6 +42,10 @@ public class SemNome{
                 break;
             }
             case 4:{
+                RemoverPessoas();
+                break;
+            }
+            case 5:{
                 Console.Clear();
                 Console.WriteLine("Encerrando Programa.");
                 Environment.Exit(0);
@@ -48,26 +54,33 @@ public class SemNome{
         }
     }
 
-    static void Cadastro(){
+    static void Cadastro(){  // Falta ser consertado para salvar só onde houver NULL.
         char Cond;
         //Console.Clear();
-        Console.WriteLine("~~~~ CADASTRO ~~~~");
-        for(int i = VetNomeUtilizado; i<Nomes.Length; i++){
-            Console.Write("Digite o nome a ser cadastrado: ");
-            Nomes[i] = Console.ReadLine();
-            VetNomeUtilizado++;
-            Console.WriteLine("Deseja cadastrar outro nome? [S/N]");
-            Cond = char.Parse(Console.ReadLine());
-            if(Cond == 'S' || Cond == 's'){
-                if(VetNomeUtilizado >= Nomes.Length){
-                    Console.WriteLine("Maximo de nomes ja cadastrados.");
+
+        int Indice = Array.IndexOf(Nomes, "NULL");
+        if(Indice != -1){
+            Console.WriteLine("~~~~ CADASTRO ~~~~");
+            for(int i = VetNomeUtilizado; i<Nomes.Length; i++){
+                Console.Write("Digite o nome a ser cadastrado: ");
+                Nomes[i] = Console.ReadLine();
+                VetNomeUtilizado++;
+                Console.WriteLine("Deseja cadastrar outro nome? [S/N]");
+                Cond = char.Parse(Console.ReadLine());
+                if(Cond == 'S' || Cond == 's'){
+                    if(VetNomeUtilizado >= Nomes.Length){
+                        Console.WriteLine("Maximo de nomes ja cadastrados.");
+                        Main();
+                    }
+                    continue;
+                }else{
                     Main();
                 }
-                continue;
-            }else{
-                Main();
             }
-        }
+        }else{
+            Console.WriteLine("Não tem mais espaços para serem cadastrados.");
+            Main();
+        }        
     }
     static void ListarCadastros(){
         Console.Clear();
@@ -109,6 +122,42 @@ public class SemNome{
             Console.WriteLine("Encerrando programa.");
             Environment.Exit(0);
         }
+    }
+
+    static void RemoverPessoas(){
+        Console.Clear();
+        int CPF;
+        Console.WriteLine("Digite o CPF da pessoa que deseja deletar: ");
+        CPF = int.Parse(Console.ReadLine());
+        int Indice = Array.IndexOf(CPFS, CPF);
+        if(Indice != -1){
+            Console.Write("\nO CPF procurado é: {0}, Nome:{1}... Deseja remover? [S/N]",CPF, Nomes[Indice]);
+            char Cond;
+            Cond = char.Parse(Console.ReadLine());
+            if(Cond == 's' || Cond == 'S'){
+                Console.WriteLine("Nome: '{0}' CPF: '{1}' Deletados com sucesso.", Nomes[Indice], CPFS[Indice]);
+                Nomes[Indice] = "NULL";
+                CPFS[Indice] = 000;
+                Console.WriteLine("Voltando para o menu principal...");
+                Main();
+            }else if(Cond == 'n' || Cond == 'N'){
+                Console.WriteLine("Esta pessoa não foi deletada... Voltando para menu principal.");
+                Main();
+            }else{
+                Console.WriteLine("Condição digitada incorretamente... Encerrando programa.");
+                Environment.Exit(0);
+            }
+        }else{
+            Console.WriteLine("CPF não encontrado... Deseja tentar novamente? [S/N]");
+            char Cond2;
+            Cond2 = char.Parse(Console.ReadLine());
+            if(Cond2 == 's' || Cond2 == 'S'){
+                RemoverPessoas();
+            }else{
+                Console.WriteLine("Voltando para o menu principal...");
+            }
+        }
+        
     }
 
 }
