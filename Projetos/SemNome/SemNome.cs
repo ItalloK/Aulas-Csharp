@@ -6,9 +6,8 @@ using Internal;
 
 public class SemNome{
 
-    static string[] Nomes = new string[5]{"Italo","Ana Clara","Bruno","Brenno","Pedro"};
-    static int[] CPFS = new int[5]{123,456,789,098,765};
-    static int VetNomeUtilizado = 0;
+    static string[] Nomes = new string[5]{"NULL","NULL","NULL","NULL","NULL"};
+    static long[] CPFS = new long[5]{123,456,789,987,654};
     static void Main(){
         //Console.Clear();
         DateTime Agora = DateTime.Now; // Define Agora como Date
@@ -25,7 +24,8 @@ public class SemNome{
         }while(Opcao < 1 || Opcao > 5);
         switch(Opcao){
             case 1:{
-                if(VetNomeUtilizado >= Nomes.Length){
+                int Procura = Array.IndexOf(Nomes, "NULL");
+                if(Procura == -1){
                     Console.WriteLine("Maximo de nomes ja cadastrados.");
                     Main();
                 }else{
@@ -54,29 +54,17 @@ public class SemNome{
         }
     }
 
-    static void Cadastro(){  // Falta ser consertado para salvar só onde houver NULL.
-        char Cond;
-        //Console.Clear();
-
+    static void Cadastro(){ 
+        Console.Clear();
         int Indice = Array.IndexOf(Nomes, "NULL");
         if(Indice != -1){
             Console.WriteLine("~~~~ CADASTRO ~~~~");
-            for(int i = VetNomeUtilizado; i<Nomes.Length; i++){
-                Console.Write("Digite o nome a ser cadastrado: ");
-                Nomes[i] = Console.ReadLine();
-                VetNomeUtilizado++;
-                Console.WriteLine("Deseja cadastrar outro nome? [S/N]");
-                Cond = char.Parse(Console.ReadLine());
-                if(Cond == 'S' || Cond == 's'){
-                    if(VetNomeUtilizado >= Nomes.Length){
-                        Console.WriteLine("Maximo de nomes ja cadastrados.");
-                        Main();
-                    }
-                    continue;
-                }else{
-                    Main();
-                }
-            }
+            Console.Write("Digite o nome a ser cadastrado: ");
+            Nomes[Indice] = Console.ReadLine();
+            Console.Write("Agora digite o CPF de {0} :", Nomes[Indice]);
+            CPFS[Indice] = long.Parse(Console.ReadLine());
+            Console.WriteLine("Nome: '{0}', CPF: '{1}', cadastrado com sucesso.", Nomes[Indice], CPFS[Indice]);
+            Main();
         }else{
             Console.WriteLine("Não tem mais espaços para serem cadastrados.");
             Main();
@@ -85,9 +73,10 @@ public class SemNome{
     static void ListarCadastros(){
         Console.Clear();
         Console.WriteLine("Nomes Cadastrados: ");
-        foreach(string n in Nomes){
-            Console.WriteLine(n);
-        }
+        for(int i = 0; i<Nomes.Length; i++){
+            Console.WriteLine("Nome: '{0}' CPF: '{1}'", Nomes[i], CPFS[i]);
+        }        
+        
         char Cond;
         Console.WriteLine("Deseja voltar para o menu principal? [S/N]");
         Cond = char.Parse(Console.ReadLine());
@@ -102,9 +91,9 @@ public class SemNome{
     }
     static void ProcurarPessoa(){
         Console.Clear();
-        int CPF;
+        long CPF;
         Console.Write("Digite o CPF que deseja procurar: ");
-        CPF = int.Parse(Console.ReadLine());
+        CPF = long.Parse(Console.ReadLine());
         int Indice = Array.IndexOf(CPFS, CPF);
         if(Indice != -1){
             Console.WriteLine("\nO CPF '{0}' foi encontrado no indice {1} o nome é: {2}", CPF, Indice, Nomes[Indice]);
@@ -126,9 +115,9 @@ public class SemNome{
 
     static void RemoverPessoas(){
         Console.Clear();
-        int CPF;
+        long CPF;
         Console.WriteLine("Digite o CPF da pessoa que deseja deletar: ");
-        CPF = int.Parse(Console.ReadLine());
+        CPF = long.Parse(Console.ReadLine());
         int Indice = Array.IndexOf(CPFS, CPF);
         if(Indice != -1){
             Console.Write("\nO CPF procurado é: {0}, Nome:{1}... Deseja remover? [S/N]",CPF, Nomes[Indice]);
