@@ -4,6 +4,12 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Internal;
 
+/*  Coisas para implementar:
+    1 - Trocar CPF de long para string ( está cortando o 0 na hora do cadastro )
+
+
+*/
+
 public class SemNome{
 
     static string[] Nomes = new string[5]{"NULL","NULL","NULL","NULL","NULL"};
