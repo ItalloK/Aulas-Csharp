@@ -61,14 +61,23 @@ public class SemNome{
             Console.WriteLine("~~~~ CADASTRO ~~~~");
             Console.Write("Digite o nome a ser cadastrado: ");
             Nomes[Indice] = Console.ReadLine();
+            int CpfsCad;
             do{
                 Console.Write("Agora digite o CPF de '{0}' : ", Nomes[Indice]);
-                CPFS[Indice] = Console.ReadLine();
-                if(CPFS[Indice].Length < 11 || CPFS[Indice].Length > 11){
-                    Console.WriteLine("Erro, você digitou um CPF inválido.");
+                string RecebeCPF;
+                RecebeCPF = Console.ReadLine();
+                CpfsCad = Array.IndexOf(CPFS, RecebeCPF);
+                if(CpfsCad < 0){
+                    CPFS[Indice] = RecebeCPF;
+                }else if(CpfsCad >= 0){
+                    Console.WriteLine("ERRO, esse CPF ja está cadastrado.");
                 }
-            }while(CPFS[Indice].Length < 11);
-            Console.WriteLine("Nome: '{0}', CPF: '{1}', cadastrado com sucesso.", Nomes[Indice], CPFS[Indice]);
+                if(RecebeCPF.Length < 11 || RecebeCPF.Length > 11){
+                    Console.WriteLine("Erro, você digitou um CPF inválido.");
+                }               
+            }while(CPFS[Indice].Length < 11 || CpfsCad >= 0);
+            Console.Clear();
+            Console.WriteLine("Nome: '{0}', CPF: '{1}', cadastrado com sucesso.\n\n", Nomes[Indice], CPFS[Indice]);
             Main();
         }else{
             Console.WriteLine("Não tem mais espaços para serem cadastrados.");
@@ -79,9 +88,8 @@ public class SemNome{
         Console.Clear();
         Console.WriteLine("Nomes Cadastrados: ");
         for(int i = 0; i<Nomes.Length; i++){
-            Console.WriteLine("Nome: '{0}' CPF: '{1}'", Nomes[i], CPFS[i]);
+            Console.WriteLine("Nome: '{0}' \tCPF: '{1}'", Nomes[i], CPFS[i]);
         }        
-        
         char Cond;
         Console.WriteLine("Deseja voltar para o menu principal? [S/N]");
         Cond = char.Parse(Console.ReadLine());
