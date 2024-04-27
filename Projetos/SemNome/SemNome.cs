@@ -4,16 +4,10 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Internal;
 
-/*  Coisas para implementar:
-    1 - Trocar CPF de long para string ( está cortando o 0 na hora do cadastro )
-
-
-*/
-
 public class SemNome{
 
     static string[] Nomes = new string[5]{"NULL","NULL","NULL","NULL","NULL"};
-    static long[] CPFS = new long[5]{123,456,789,987,654};
+    static string[] CPFS = new string[5]{"NULL","NULL","NULL","NULL","NULL"};
     static void Main(){
         //Console.Clear();
         DateTime Agora = DateTime.Now; // Define Agora como Date
@@ -67,8 +61,13 @@ public class SemNome{
             Console.WriteLine("~~~~ CADASTRO ~~~~");
             Console.Write("Digite o nome a ser cadastrado: ");
             Nomes[Indice] = Console.ReadLine();
-            Console.Write("Agora digite o CPF de {0} :", Nomes[Indice]);
-            CPFS[Indice] = long.Parse(Console.ReadLine());
+            do{
+                Console.Write("Agora digite o CPF de '{0}' : ", Nomes[Indice]);
+                CPFS[Indice] = Console.ReadLine();
+                if(CPFS[Indice].Length < 11 || CPFS[Indice].Length > 11){
+                    Console.WriteLine("Erro, você digitou um CPF inválido.");
+                }
+            }while(CPFS[Indice].Length < 11);
             Console.WriteLine("Nome: '{0}', CPF: '{1}', cadastrado com sucesso.", Nomes[Indice], CPFS[Indice]);
             Main();
         }else{
@@ -97,12 +96,12 @@ public class SemNome{
     }
     static void ProcurarPessoa(){
         Console.Clear();
-        long CPF;
+        string CPF;
         Console.Write("Digite o CPF que deseja procurar: ");
-        CPF = long.Parse(Console.ReadLine());
+        CPF = Console.ReadLine();
         int Indice = Array.IndexOf(CPFS, CPF);
         if(Indice != -1){
-            Console.WriteLine("\nO CPF '{0}' foi encontrado no indice {1} o nome é: {2}", CPF, Indice, Nomes[Indice]);
+            Console.WriteLine("\nO CPF '{0}' foi encontrado no indice {1} o nome é: '{2}'", CPF, Indice, Nomes[Indice]);
         }else{
             Console.WriteLine("\nO CPF não foi encontrado.");
         }
@@ -121,18 +120,18 @@ public class SemNome{
 
     static void RemoverPessoas(){
         Console.Clear();
-        long CPF;
+        string CPF;
         Console.WriteLine("Digite o CPF da pessoa que deseja deletar: ");
-        CPF = long.Parse(Console.ReadLine());
+        CPF = Console.ReadLine();
         int Indice = Array.IndexOf(CPFS, CPF);
         if(Indice != -1){
-            Console.Write("\nO CPF procurado é: {0}, Nome:{1}... Deseja remover? [S/N]",CPF, Nomes[Indice]);
+            Console.WriteLine("\nO CPF procurado é: '{0}', Nome:'{1}'... Deseja remover? [S/N]",CPF, Nomes[Indice]);
             char Cond;
             Cond = char.Parse(Console.ReadLine());
             if(Cond == 's' || Cond == 'S'){
                 Console.WriteLine("Nome: '{0}' CPF: '{1}' Deletados com sucesso.", Nomes[Indice], CPFS[Indice]);
                 Nomes[Indice] = "NULL";
-                CPFS[Indice] = 000;
+                CPFS[Indice] = "NULL";
                 Console.WriteLine("Voltando para o menu principal...");
                 Main();
             }else if(Cond == 'n' || Cond == 'N'){
