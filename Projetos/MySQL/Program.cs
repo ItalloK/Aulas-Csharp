@@ -16,9 +16,13 @@ class Program
                 {
                     while (reader.Read()) // Itera sobre as linhas retornadas
                     {
-                        // Exemplo: lendo uma coluna chamada "Nome"
-                        string nome = reader["Nome"].ToString(); // Substitua "Nome" pelo nome da coluna que deseja acessar
-                        Console.WriteLine(nome);
+                        // Lendo as colunas "Nome", "Idade" e "Cargo"
+                        string nome = reader["Nome"].ToString();
+                        string idade = reader["Idade"].ToString();
+                        string cargo = reader["Cargo"].ToString();
+                        
+                        // Exibindo as informações
+                        Console.WriteLine("Nome: {0}, Idade: {1}, Cargo: {2}", nome, idade, cargo);
                     }
                 }
             }

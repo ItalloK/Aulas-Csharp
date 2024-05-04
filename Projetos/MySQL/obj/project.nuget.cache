@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YwPblpI/s8Ill+TLb3ToMIaEk5r73r3c7ni7XydL5BCnIs/1V4pEEL0zi0VdJtDdL34fcVTWv9th062GV0aNxw==",
+  "dgSpecHash": "7MUYRQ2Uz0fnSVKlLKh4+rdtwDD0vVeaAr/pTLQBqCl5qlMLVqlkp7Ifw6p79sZiRxQOTPXoqL9Z05piArr3aQ==",
   "success": true,
-  "projectFilePath": "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\MySQL\\MySQL.csproj",
+  "projectFilePath": "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\Mysql\\MySQL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\itall\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\itall\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

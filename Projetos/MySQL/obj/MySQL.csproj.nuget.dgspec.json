@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\MySQL\\MySQL.csproj": {}
+    "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\Mysql\\MySQL.csproj": {}
   },
   "projects": {
-    "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\MySQL\\MySQL.csproj": {
+    "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\Mysql\\MySQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\MySQL\\MySQL.csproj",
+        "projectUniqueName": "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\Mysql\\MySQL.csproj",
         "projectName": "MySQL",
-        "projectPath": "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\MySQL\\MySQL.csproj",
+        "projectPath": "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\Mysql\\MySQL.csproj",
         "packagesPath": "C:\\Users\\itall\\.nuget\\packages\\",
-        "outputPath": "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\MySQL\\obj\\",
+        "outputPath": "D:\\Jogos Não Steam\\Programação\\C#\\Projetos\\Mysql\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\itall\\AppData\\Roaming\\NuGet\\NuGet.Config",
