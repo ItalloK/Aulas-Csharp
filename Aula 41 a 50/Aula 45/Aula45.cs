@@ -25,13 +25,15 @@ class Aula45{
         carros[3].Modelo = "Fusca";
         carros[3].Cor = "Azul";
 
-        /*for(int i = 0; i<carros.Length; i++){
+        for(int i = 0; i<carros.Length; i++){ // Assim 
             carros[i].info();
-        }*/
+        }
 
-        carros[0].info();
+        carros[0].info(); // ou assim
         carros[1].info();
         carros[2].info();
+
+        
 
     }
 }
