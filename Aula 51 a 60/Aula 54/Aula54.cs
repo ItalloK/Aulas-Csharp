@@ -28,7 +28,7 @@ class Aula54{
     static void Main(){
         float area = 0;
         try{
-            area = Calc1.Area.Quad(0F, 5F); // F pq é float
+            area = Calc1.Area.Quad(0F, 5F); // F pq é float ( aqui ele ta chamando do namescape calc1 )
             Console.WriteLine("Area do Quadrado: {0}", area);
         }catch(Exception e){
             Console.WriteLine("Erro: {0}",e.Message);
