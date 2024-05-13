@@ -22,7 +22,13 @@ namespace Aula62
             tb_1.Text = monthCalendar1.SelectionStart.ToShortDateString(); // pega a primeira data
             tb_2.Text = monthCalendar1.SelectionEnd.ToShortDateString(); // pega a ultima data
             tb_3.Text = monthCalendar1.TodayDate.ToShortDateString(); // o toshortdatestring nn mostra a hora
+        }
 
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            tb_1.Text = monthCalendar1.SelectionStart.ToShortDateString(); // pega a primeira data
+            tb_2.Text = monthCalendar1.SelectionEnd.ToShortDateString(); // pega a ultima data
+            tb_3.Text = monthCalendar1.TodayDate.ToShortDateString(); // o toshortdatestring nn mostra a hora
         }
     }
 }
