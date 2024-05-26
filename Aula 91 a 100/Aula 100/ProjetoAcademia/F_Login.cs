@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace ProjetoAcademia
 {
-    public partial class Form1 : Form
+    public partial class F_Login : Form
     {
-        public Form1()
+        Form1 form1;
+        public F_Login(Form1 f)
         {
             InitializeComponent();
-            F_Login f_Login = new F_Login(this);
-            f_Login.ShowDialog();
+            form1 = f;
         }
     }
 }
