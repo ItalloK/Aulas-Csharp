@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\banco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:banco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Banco.cs",
+              "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Banco.cs",
+              "RelativeDocumentMoniker": "Banco.cs",
+              "ToolTip": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Banco.cs",
+              "RelativeToolTip": "Banco.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T21:42:29.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
