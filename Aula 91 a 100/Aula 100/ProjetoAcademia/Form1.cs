@@ -29,10 +29,78 @@ namespace ProjetoAcademia
         {
             lb_acesso.Text = "0";
             lb_nomeusuario.Text = "---";
-            /* Essas são 2 formas de acessar os resultados */
             pb_ledlogado.Image = Properties.Resources.LED_VERMELHO;
             Globais.nivel = 0;
             Globais.logado = false;
+        }
+
+        private void bancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(Globais.logado)
+            {
+                if(Globais.nivel >= 2)
+                {
+                    // Procedimentos
+                }
+                else
+                {
+                    MessageBox.Show("Acesso Não Permitido.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É nescessário ter um usuario logado.");
+            }
+        }
+
+        private void novoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                if (Globais.nivel >= 1)
+                {
+                    // Procedimentos
+                }
+                else
+                {
+                    MessageBox.Show("Acesso Não Permitido.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É nescessário ter um usuario logado.");
+            }
+        }
+
+        private void gestãoDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                if (Globais.nivel >= 1)
+                {
+                    // Procedimentos
+                }
+                else
+                {
+                    MessageBox.Show("Acesso Não Permitido.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É nescessário ter um usuario logado.");
+            }
+        }
+
+        private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                // Procedimentos
+            }
+            else
+            {
+                MessageBox.Show("É nescessário ter um usuario logado.");
+            }
         }
     }
 }
