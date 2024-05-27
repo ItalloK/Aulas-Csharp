@@ -60,6 +60,7 @@
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(159, 20);
             this.tb_username.TabIndex = 2;
+            this.tb_username.Text = "ItalloK";
             // 
             // tb_senha
             // 
@@ -68,6 +69,7 @@
             this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(159, 20);
             this.tb_senha.TabIndex = 3;
+            this.tb_senha.Text = "123";
             // 
             // btn_logar
             // 
