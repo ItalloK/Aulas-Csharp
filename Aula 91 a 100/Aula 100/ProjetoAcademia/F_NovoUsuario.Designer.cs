@@ -42,10 +42,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_novo = new System.Windows.Forms.Button();
-            this.btn_salvar = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_salvar = new System.Windows.Forms.Button();
+            this.btn_novo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.n_nivel)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,7 @@
             // 
             this.tb_senha.Location = new System.Drawing.Point(367, 26);
             this.tb_senha.Name = "tb_senha";
+            this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(112, 20);
             this.tb_senha.TabIndex = 5;
             // 
@@ -179,15 +180,27 @@
             this.panel1.Size = new System.Drawing.Size(487, 29);
             this.panel1.TabIndex = 13;
             // 
-            // btn_novo
+            // btn_fechar
             // 
-            this.btn_novo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_novo.Location = new System.Drawing.Point(3, 3);
-            this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(75, 23);
-            this.btn_novo.TabIndex = 0;
-            this.btn_novo.Text = "Novo";
-            this.btn_novo.UseVisualStyleBackColor = true;
+            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_fechar.Location = new System.Drawing.Point(409, 3);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(75, 23);
+            this.btn_fechar.TabIndex = 3;
+            this.btn_fechar.Text = "Fechar";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.Location = new System.Drawing.Point(165, 3);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cancelar.TabIndex = 2;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_salvar
             // 
@@ -200,25 +213,16 @@
             this.btn_salvar.UseVisualStyleBackColor = true;
             this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
-            // btn_cancelar
+            // btn_novo
             // 
-            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelar.Location = new System.Drawing.Point(165, 3);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancelar.TabIndex = 2;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            // 
-            // btn_fechar
-            // 
-            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(409, 3);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(75, 23);
-            this.btn_fechar.TabIndex = 3;
-            this.btn_fechar.Text = "Fechar";
-            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_novo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_novo.Location = new System.Drawing.Point(3, 3);
+            this.btn_novo.Name = "btn_novo";
+            this.btn_novo.Size = new System.Drawing.Size(75, 23);
+            this.btn_novo.TabIndex = 0;
+            this.btn_novo.Text = "Novo";
+            this.btn_novo.UseVisualStyleBackColor = true;
+            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
             // 
             // F_NovoUsuario
             // 

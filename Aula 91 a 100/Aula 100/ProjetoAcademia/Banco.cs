@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace ProjetoAcademia
 {
@@ -62,6 +63,63 @@ namespace ProjetoAcademia
                 throw ex;
             }
 
+        }
+
+        /* Funcoes do F_NovoUsuario */
+    
+
+        public static void NovoUsuario(Usuario u)
+        {
+            if (existeUsername(u))
+            {
+                MessageBox.Show("Username ja existe.");
+                return;
+            }
+
+            try
+            {
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = "ISERT INTO tb_usuarios (T_NOMEUSUARIO,T_USERNAME,T_SENHAUSUARIO,T_STATUSUSUARIO,N_NIVELUSUARIO) VALUES (@nome, @username, @senha, @status, @nivel)";
+                cmd.Parameters.AddWithValue("@nome", u.nome);
+                cmd.Parameters.AddWithValue("@username", u.username);
+                cmd.Parameters.AddWithValue("@senha", u.senha);
+                cmd.Parameters.AddWithValue("@status", u.status);
+                cmd.Parameters.AddWithValue("@nivel", u.nivel);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Novo Usuário Inserido.");
+                ConexaoBanco().Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao gravar novo usuário.");
+                ConexaoBanco().Close();
+            }
+
+        }
+
+
+        /* Fim Funcoes F_NovoUsuario */
+
+        /* Rotinas Gerais */
+
+        public static bool existeUsername(Usuario u)
+        {
+            bool res;
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            var cmd = ConexaoBanco().CreateCommand();
+            cmd.CommandText = "SELECT T_USERNAME FROM tb_usuarios WHERE T_USERNAME ='"+u.username+"'";
+            da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+            da.Fill(dt);
+            if(dt.Rows.Count > 0)
+            {
+                res = true;
+            }
+            else
+            {
+                res = false;
+            }
+            return res;
         }
     }
 }
