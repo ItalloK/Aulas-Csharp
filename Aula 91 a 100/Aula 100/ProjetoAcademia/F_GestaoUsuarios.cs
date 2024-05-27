@@ -48,5 +48,43 @@ namespace ProjetoAcademia
             }
 
         }
+
+        private void btn_novo_Click(object sender, EventArgs e)
+        {
+            F_NovoUsuario f_NovoUsuario = new F_NovoUsuario();
+            f_NovoUsuario.ShowDialog();
+            dgv_usuarios.DataSource = Banco.ObterUsuariosIdNome();
+        }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            int linha = dgv_usuarios.SelectedRows[0].Index; // pega a linha selecionada
+            Usuario u = new Usuario();
+            u.id = Convert.ToInt32(tb_id.Text);
+            u.nome = tb_nome.Text;
+            u.username = tb_username.Text;
+            u.senha = tb_senha.Text;
+            u.status = cb_status.Text;
+            u.nivel = Convert.ToInt32(Math.Round(n_nivel.Value,0));
+            Banco.AtualizarUsuario(u);
+
+            /*Da forma abaixo ele recarrega todo o banco de dados*/
+            //dgv_usuarios.DataSource = Banco.ObterUsuariosIdNome();
+            //dgv_usuarios.CurrentCell = dgv_usuarios[0, linha]; 
+            /*A linhad e codigo acima seleciona a linha editada novamente*/
+
+            /*Da forma abaixo ele altera a linha que foi editada apenas*/
+            dgv_usuarios[1, linha].Value = tb_nome.Text; 
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Confirma Exclusão?","Excluir?", MessageBoxButtons.YesNo);
+            if(res == DialogResult.Yes)
+            {
+                Banco.DeletarUsuario(tb_id.Text);
+                dgv_usuarios.Rows.Remove(dgv_usuarios.CurrentRow); // remove a linha do datagridview pra evitar recarregar o banco toda hora
+            }
+        }
     }
 }
