@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\f_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:f_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\f_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\f_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:f_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\f_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:f_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\globais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:globais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\banco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:banco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,24 +34,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "Banco.cs",
+              "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Banco.cs",
+              "RelativeDocumentMoniker": "Banco.cs",
+              "ToolTip": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Banco.cs",
+              "RelativeToolTip": "Banco.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAADwAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T00:50:46.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Globais.cs",
+              "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Globais.cs",
+              "RelativeDocumentMoniker": "Globais.cs",
+              "ToolTip": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Globais.cs",
+              "RelativeToolTip": "Globais.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T00:15:45.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "F_Login.cs",
               "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\F_Login.cs",
               "RelativeDocumentMoniker": "F_Login.cs",
               "ToolTip": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\F_Login.cs",
               "RelativeToolTip": "F_Login.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAcAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAACQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T23:48:42.823Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "F_Login.cs [Design]",
               "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\F_Login.cs",
               "RelativeDocumentMoniker": "F_Login.cs",
@@ -55,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -67,13 +101,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAABEAAAAuAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAACIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T23:42:51.796Z",
               "EditorCaption": ""

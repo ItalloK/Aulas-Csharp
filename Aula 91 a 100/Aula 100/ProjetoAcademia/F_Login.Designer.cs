@@ -77,6 +77,7 @@
             this.btn_logar.TabIndex = 4;
             this.btn_logar.Text = "Logar";
             this.btn_logar.UseVisualStyleBackColor = true;
+            this.btn_logar.Click += new System.EventHandler(this.btn_logar_Click);
             // 
             // btn_cancelar
             // 
@@ -86,6 +87,7 @@
             this.btn_cancelar.TabIndex = 5;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // F_Login
             // 
