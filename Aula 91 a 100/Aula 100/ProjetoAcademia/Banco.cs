@@ -26,17 +26,16 @@ namespace ProjetoAcademia
             DataTable dt = new DataTable();
             try
             {
-                using (var cmd = ConexaoBanco().CreateCommand())
-                {
-                    cmd.CommandText = "SELECT * FROM tb_usuarios";
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
-                    da.Fill(dt);
-                    ConexaoBanco().Close();
-                    return dt;
-                }
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM tb_usuarios";
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
             }catch(Exception ex)
             {
-                ConexaoBanco().Close();
                 throw ex;
             }
         }
@@ -48,26 +47,69 @@ namespace ProjetoAcademia
             DataTable dt = new DataTable();
             try
             {
-                using (var cmd = ConexaoBanco().CreateCommand())
-                {
-                    cmd.CommandText = sql;
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
-                    da.Fill(dt);
-                    ConexaoBanco().Close();
-                    return dt;
-                }
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = sql;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
             }
             catch (Exception ex)
             {
-                ConexaoBanco().Close();
                 throw ex;
             }
 
         }
 
-        /* Funcoes do F_NovoUsuario */
-    
 
+        /*Funções do Form F_GestaoUsuarios*/
+
+        public static DataTable ObterUsuariosIdNome()
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT N_IDUSUARIO as 'ID Usuário',T_NOMEUSUARIO as 'Nome Usuário' FROM tb_usuarios";
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static DataTable ObterDadosUsuario(string id)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM tb_usuarios WHERE N_IDUSUARIO="+id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /*Fim Funções do Form F_GestaoUsuarios*/
+
+        /* Funcoes do F_NovoUsuario */
         public static void NovoUsuario(Usuario u)
         {
             if (existeUsername(u))
@@ -78,7 +120,8 @@ namespace ProjetoAcademia
 
             try
             {
-                var cmd = ConexaoBanco().CreateCommand();
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
                 cmd.CommandText = "ISERT INTO tb_usuarios (T_NOMEUSUARIO,T_USERNAME,T_SENHAUSUARIO,T_STATUSUSUARIO,N_NIVELUSUARIO) VALUES (@nome, @username, @senha, @status, @nivel)";
                 cmd.Parameters.AddWithValue("@nome", u.nome);
                 cmd.Parameters.AddWithValue("@username", u.username);
@@ -87,12 +130,11 @@ namespace ProjetoAcademia
                 cmd.Parameters.AddWithValue("@nivel", u.nivel);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Novo Usuário Inserido.");
-                ConexaoBanco().Close();
+                vcon.Close();
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Erro ao gravar novo usuário.");
-                ConexaoBanco().Close();
             }
 
         }
@@ -107,9 +149,11 @@ namespace ProjetoAcademia
             bool res;
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
-            var cmd = ConexaoBanco().CreateCommand();
+
+            var vcon = ConexaoBanco();
+            var cmd = vcon.CreateCommand();
             cmd.CommandText = "SELECT T_USERNAME FROM tb_usuarios WHERE T_USERNAME ='"+u.username+"'";
-            da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+            da = new SQLiteDataAdapter(cmd.CommandText, vcon);
             da.Fill(dt);
             if(dt.Rows.Count > 0)
             {
@@ -119,6 +163,7 @@ namespace ProjetoAcademia
             {
                 res = false;
             }
+            vcon.Close();
             return res;
         }
     }
