@@ -22,3 +22,4 @@ D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademi
 D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademia\obj\Debug\ProjetoAcademia.F_GestaoUsuarios.resources
 D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademia\obj\Debug\ProjetoAcademia.F_Horarios.resources
 D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademia\obj\Debug\ProjetoAcademia.F_GestaoProfessores.resources
+D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademia\obj\Debug\ProjetoAcademia.F_GestaoTurmas.resources
