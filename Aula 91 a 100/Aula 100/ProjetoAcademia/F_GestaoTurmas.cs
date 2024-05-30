@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Mapping;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -109,6 +110,58 @@ namespace ProjetoAcademia
                 cb_horario.SelectedValue = dt.Rows[0].Field<Int64>("N_IDHORARIO");
 
             }
+        }
+
+        private void btn_novaturma_Click(object sender, EventArgs e)
+        {
+            tb_dscturma.Clear();
+            cb_professor.SelectedIndex = -1;
+            n_maxAlunos.Value = 0;
+            cb_status.SelectedIndex = -1;
+            cb_horario.SelectedIndex = -1;
+
+        }
+
+        private void btn_salvaredicoes_Click(object sender, EventArgs e)
+        {
+            int linha = dgv_turmas.SelectedRows[0].Index;
+            string queryAtualizarTurma = String.Format(@"
+                UPDATE
+                    tb_turmas 
+                SET 
+                    T_DSCTURMA = '{0}',
+                    N_IDPROFESSOR = {1},
+                    N_IDHORARIO = {2},
+                    N_MAXALUNOS = {3},
+                    T_STATUS = '{4}'
+                WHERE 
+                    N_IDTURMA = {5}", tb_dscturma.Text, cb_professor.SelectedValue, cb_horario.SelectedValue, Int32.Parse(Math.Round(n_maxAlunos.Value, 0).ToString()), cb_status.SelectedValue, idSelecionado);
+            Banco.dml(queryAtualizarTurma);
+            dgv_turmas[1, linha].Value = tb_dscturma.Text;
+            dgv_turmas[2, linha].Value = cb_horario.Text;
+            MessageBox.Show("Dados Gravados");
+            
+        }
+
+        private void btn_excluirturma_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Confirma exclusão?", "Excluir?", MessageBoxButtons.YesNo);
+            if(res == DialogResult.Yes)
+            {
+                string queryExcluirTurma = String.Format(@" 
+                    DELETE 
+                    FROM 
+                        tb_turmas
+                    WHERE
+                        N_IDTURMA={0}", idSelecionado);
+                Banco.dml(queryExcluirTurma);
+                dgv_turmas.Rows.Remove(dgv_turmas.CurrentRow);
+            }
+        }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

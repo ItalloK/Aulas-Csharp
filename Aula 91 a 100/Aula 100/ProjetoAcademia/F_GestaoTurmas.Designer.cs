@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_fechar = new System.Windows.Forms.Button();
             this.btn_imprimirturma = new System.Windows.Forms.Button();
@@ -46,6 +46,8 @@
             this.dgv_turmas = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.tb_dscturma = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_maxAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).BeginInit();
@@ -73,6 +75,7 @@
             this.btn_fechar.TabIndex = 10;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_imprimirturma
             // 
@@ -93,6 +96,7 @@
             this.btn_excluirturma.TabIndex = 8;
             this.btn_excluirturma.Text = "Excluir Turma";
             this.btn_excluirturma.UseVisualStyleBackColor = true;
+            this.btn_excluirturma.Click += new System.EventHandler(this.btn_excluirturma_Click);
             // 
             // btn_salvaredicoes
             // 
@@ -103,6 +107,7 @@
             this.btn_salvaredicoes.TabIndex = 7;
             this.btn_salvaredicoes.Text = "Salvar Edições";
             this.btn_salvaredicoes.UseVisualStyleBackColor = true;
+            this.btn_salvaredicoes.Click += new System.EventHandler(this.btn_salvaredicoes_Click);
             // 
             // btn_novaturma
             // 
@@ -113,6 +118,7 @@
             this.btn_novaturma.TabIndex = 6;
             this.btn_novaturma.Text = "Nova Turma";
             this.btn_novaturma.UseVisualStyleBackColor = true;
+            this.btn_novaturma.Click += new System.EventHandler(this.btn_novaturma_Click);
             // 
             // lbl_professor
             // 
@@ -185,14 +191,14 @@
             // 
             this.dgv_turmas.AllowUserToAddRows = false;
             this.dgv_turmas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_turmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_turmas.EnableHeadersVisualStyles = false;
             this.dgv_turmas.Location = new System.Drawing.Point(12, 12);
@@ -221,11 +227,29 @@
             this.tb_dscturma.Size = new System.Drawing.Size(247, 20);
             this.tb_dscturma.TabIndex = 1;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(389, 254);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Vagas";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(392, 270);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(123, 20);
+            this.textBox1.TabIndex = 14;
+            // 
             // F_GestaoTurmas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.tb_dscturma);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgv_turmas);
@@ -271,5 +295,7 @@
         private System.Windows.Forms.DataGridView dgv_turmas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb_dscturma;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
