@@ -262,8 +262,12 @@ namespace ProjetoAcademia
             string nomeArquivo = Globais.caminho + @"\turmas.pdf";
             FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
             Document doc = new Document(PageSize.A4);
-
             PdfWriter escritorPDF = PdfWriter.GetInstance(doc, arquivoPDF);
+
+            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(Globais.caminho + @"\academia.png");
+            logo.ScaleToFit(140f, 120f);
+            logo.Alignment = Element.ALIGN_LEFT;
+            //logo.SetAbsolutePosition(100f, 600f); // x e y
 
             string dados = "";
 
@@ -278,13 +282,43 @@ namespace ProjetoAcademia
 
             Paragraph paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12, (int)System.Drawing.FontStyle.Bold));
             paragrafo2.Alignment = Element.ALIGN_LEFT;
-            texto = "Paragrafo 2";
+            texto = "Paragrafo 2\n\n";
             paragrafo2.Add(texto);
 
 
+            PdfPTable tabela = new PdfPTable(3);// 3 colunas
+            tabela.DefaultCell.FixedHeight = 20;
+
+            //PdfPCell celula1 = new PdfPCell(new Phrase("Tabela de Preços"));
+            PdfPCell celula1 = new PdfPCell();
+            celula1.Colspan = 3;
+            //celula1.Rotation = 90; // usar junto com o ' tabela de preços que foi comentado 
+            celula1.AddElement(logo);
+            tabela.AddCell(celula1);
+
+            tabela.AddCell("Codigo");
+            tabela.AddCell("Produto");
+            tabela.AddCell("Preço");
+
+            tabela.AddCell("01");
+            tabela.AddCell("Mouse");
+            tabela.AddCell("R$ 25,00");
+
+
+            PdfPCell celula2 = new PdfPCell(new Phrase("Tabela de Preços"));
+            celula2.Rotation = 0;
+            celula2.Colspan = 3;
+            celula2.FixedHeight = 40;
+            celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+            celula2.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tabela.AddCell(celula2);
+
+
             doc.Open();
+            //doc.Add(logo);
             doc.Add(paragrafo1);
             doc.Add(paragrafo2);
+            doc.Add(tabela);
             doc.Close();
 
         }
