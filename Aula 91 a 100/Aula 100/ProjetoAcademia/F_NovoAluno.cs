@@ -39,6 +39,7 @@ namespace ProjetoAcademia
             cb_status.Enabled = true;
             tb_nome.Clear();
             mtb_telefone.Clear();
+            tb_turma.Clear();
             cb_status.SelectedIndex = 0;
             tb_nome.Focus();
             btn_gravar.Enabled = true;
@@ -53,6 +54,7 @@ namespace ProjetoAcademia
             cb_status.Enabled = false;
             tb_nome.Clear();
             mtb_telefone.Clear();
+            tb_turma.Clear();
             cb_status.SelectedIndex = 0;
             btn_gravar.Enabled = false;
             btn_cancelar.Enabled = false;
@@ -72,9 +74,6 @@ namespace ProjetoAcademia
             tb_nome.Enabled = false;
             mtb_telefone.Enabled = false;
             cb_status.Enabled = false;
-            tb_nome.Clear();
-            mtb_telefone.Clear();
-            cb_status.SelectedIndex = 0;
             btn_gravar.Enabled = false;
             btn_cancelar.Enabled = false;
             btn_novo.Enabled = true;
@@ -83,6 +82,12 @@ namespace ProjetoAcademia
         private void btn_fechar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btn_selturma_Click(object sender, EventArgs e)
+        {
+            F_SelecionarTurma f_SelecionarTurma = new F_SelecionarTurma(this);
+            f_SelecionarTurma.ShowDialog();
         }
     }
 }

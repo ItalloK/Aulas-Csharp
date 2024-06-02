@@ -190,6 +190,7 @@
             this.btn_selturma.TabIndex = 13;
             this.btn_selturma.Text = "...";
             this.btn_selturma.UseVisualStyleBackColor = true;
+            this.btn_selturma.Click += new System.EventHandler(this.btn_selturma_Click);
             // 
             // tb_plano
             // 
@@ -252,9 +253,9 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_gravar;
         private System.Windows.Forms.Button btn_novo;
-        private System.Windows.Forms.TextBox tb_turma;
         private System.Windows.Forms.Button btn_selturma;
         private System.Windows.Forms.TextBox tb_plano;
         private System.Windows.Forms.Button btn_selplano;
+        public System.Windows.Forms.TextBox tb_turma;
     }
 }
