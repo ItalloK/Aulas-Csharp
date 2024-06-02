@@ -28,3 +28,4 @@ D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademi
 D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademia\bin\Debug\itextsharp.xml
 D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademia\obj\Debug\ProjetoAcademia.F_NovoAluno.resources
 D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademia\obj\Debug\ProjetoAcademia.F_SelecionarTurma.resources
+D:\Jogos Não Steam\Programação\Aulas C#\Aula 91 a 100\Aula 100\ProjetoAcademia\obj\Debug\ProjetoAcademia.F_GestaoAlunos.resources
