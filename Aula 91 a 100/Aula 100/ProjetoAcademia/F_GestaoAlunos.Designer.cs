@@ -69,6 +69,7 @@
             this.btn_salvaredicoes.TabIndex = 6;
             this.btn_salvaredicoes.Text = "Salvar Edições";
             this.btn_salvaredicoes.UseVisualStyleBackColor = true;
+            this.btn_salvaredicoes.Click += new System.EventHandler(this.btn_salvaredicoes_Click);
             // 
             // btn_excluiraluno
             // 
@@ -78,6 +79,7 @@
             this.btn_excluiraluno.TabIndex = 5;
             this.btn_excluiraluno.Text = "Excluir Aluno";
             this.btn_excluiraluno.UseVisualStyleBackColor = true;
+            this.btn_excluiraluno.Click += new System.EventHandler(this.btn_excluiraluno_Click);
             // 
             // btn_financeiro
             // 
@@ -96,6 +98,7 @@
             this.btn_fechar.TabIndex = 3;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // label1
             // 
@@ -203,6 +206,7 @@
             this.dgv_alunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_alunos.Size = new System.Drawing.Size(316, 366);
             this.dgv_alunos.TabIndex = 11;
+            this.dgv_alunos.SelectionChanged += new System.EventHandler(this.dgv_alunos_SelectionChanged);
             // 
             // F_GestaoAlunos
             // 

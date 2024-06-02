@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\f_gestaoalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:f_gestaoalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\f_gestaoalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:f_gestaoalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\f_selecionarturma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:f_selecionarturma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|d:\\jogos n\u00E3o steam\\programa\u00E7\u00E3o\\aulas c#\\aula 91 a 100\\aula 100\\projetoacademia\\f_gestaoalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3390124D-D3AF-4B66-924D-831868845FEA}|ProjetoAcademia.csproj|solutionrelative:f_gestaoalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,23 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "F_SelecionarTurma.cs [Design]",
-              "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\F_SelecionarTurma.cs",
-              "RelativeDocumentMoniker": "F_SelecionarTurma.cs",
-              "ToolTip": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\F_SelecionarTurma.cs [Design]",
-              "RelativeToolTip": "F_SelecionarTurma.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "F_GestaoAlunos.cs",
+              "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\F_GestaoAlunos.cs",
+              "RelativeDocumentMoniker": "F_GestaoAlunos.cs",
+              "ToolTip": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\F_GestaoAlunos.cs",
+              "RelativeToolTip": "F_GestaoAlunos.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAAAFIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T22:22:19.226Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-02T22:30:59.169Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "F_GestaoAlunos.cs [Design]",
               "DocumentMoniker": "D:\\Jogos N\u00E3o Steam\\Programa\u00E7\u00E3o\\Aulas C#\\Aula 91 a 100\\Aula 100\\ProjetoAcademia\\F_GestaoAlunos.cs",
               "RelativeDocumentMoniker": "F_GestaoAlunos.cs",
