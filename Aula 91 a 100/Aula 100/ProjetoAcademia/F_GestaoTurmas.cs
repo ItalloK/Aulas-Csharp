@@ -273,54 +273,39 @@ namespace ProjetoAcademia
 
             Paragraph paragrafo1 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 20, (int)System.Drawing.FontStyle.Bold));
             paragrafo1.Alignment = Element.ALIGN_CENTER;
-            paragrafo1.Add("Feito por: ");
-            paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
-            paragrafo1.Add("ItalloK ");
-            string texto = "github.com/ItalloK";
-            paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
-            paragrafo1.Add(texto);
+            paragrafo1.Add("Relatório de Turmas\n\n");
 
-            Paragraph paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12, (int)System.Drawing.FontStyle.Bold));
-            paragrafo2.Alignment = Element.ALIGN_LEFT;
-            texto = "Paragrafo 2\n\n";
-            paragrafo2.Add(texto);
+            Paragraph paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 20, (int)System.Drawing.FontStyle.Bold));
+            paragrafo2.Alignment = Element.ALIGN_CENTER;
+            paragrafo2.Add("Academia do Italo, o FODA");
 
 
             PdfPTable tabela = new PdfPTable(3);// 3 colunas
             tabela.DefaultCell.FixedHeight = 20;
 
-            //PdfPCell celula1 = new PdfPCell(new Phrase("Tabela de Preços"));
-            PdfPCell celula1 = new PdfPCell();
-            celula1.Colspan = 3;
-            //celula1.Rotation = 90; // usar junto com o ' tabela de preços que foi comentado 
-            celula1.AddElement(logo);
-            tabela.AddCell(celula1);
+            tabela.AddCell("ID Turma");
+            tabela.AddCell("Turma");
+            tabela.AddCell("Horário");
 
-            tabela.AddCell("Codigo");
-            tabela.AddCell("Produto");
-            tabela.AddCell("Preço");
-
-            tabela.AddCell("01");
-            tabela.AddCell("Mouse");
-            tabela.AddCell("R$ 25,00");
-
-
-            PdfPCell celula2 = new PdfPCell(new Phrase("Tabela de Preços"));
-            celula2.Rotation = 0;
-            celula2.Colspan = 3;
-            celula2.FixedHeight = 40;
-            celula2.HorizontalAlignment = Element.ALIGN_CENTER;
-            celula2.VerticalAlignment = Element.ALIGN_MIDDLE;
-            tabela.AddCell(celula2);
-
-
+            DataTable dtTurmas = Banco.dql(vqueryDGV);
+            for(int i = 0; i < dtTurmas.Rows.Count; i++)
+            {
+                tabela.AddCell(dtTurmas.Rows[i].Field<Int64>("ID").ToString());
+                tabela.AddCell(dtTurmas.Rows[i].Field<string>("Turma"));
+                tabela.AddCell(dtTurmas.Rows[i].Field<string>("Horario"));
+            }
             doc.Open();
-            //doc.Add(logo);
+            doc.Add(logo);
             doc.Add(paragrafo1);
-            doc.Add(paragrafo2);
             doc.Add(tabela);
+            doc.Add(paragrafo2);
             doc.Close();
 
+            DialogResult res = MessageBox.Show("Deseja abrir o Relatório?", "Relatorio", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start(Globais.caminho + @"\turmas.pdf");
+            }
         }
     }
 }
