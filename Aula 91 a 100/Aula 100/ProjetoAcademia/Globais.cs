@@ -16,6 +16,7 @@ namespace ProjetoAcademia
         public static string caminho = System.Environment.CurrentDirectory;
         public static string nomeBanco = "banco_academia.db";
         public static string caminhoBanco = caminho+@"\banco\";
+        public static string caminhoFotos = caminho + @"\fotos\";
 
 
         /* 
