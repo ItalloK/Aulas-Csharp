@@ -46,8 +46,11 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.btn_novo = new System.Windows.Forms.Button();
+            this.pb_foto = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.n_nivel)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -175,15 +178,15 @@
             this.panel1.Controls.Add(this.btn_salvar);
             this.panel1.Controls.Add(this.btn_novo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 152);
+            this.panel1.Location = new System.Drawing.Point(0, 170);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 29);
+            this.panel1.Size = new System.Drawing.Size(617, 29);
             this.panel1.TabIndex = 13;
             // 
             // btn_fechar
             // 
             this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(409, 3);
+            this.btn_fechar.Location = new System.Drawing.Point(535, 3);
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(75, 23);
             this.btn_fechar.TabIndex = 3;
@@ -224,11 +227,33 @@
             this.btn_novo.UseVisualStyleBackColor = true;
             this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
             // 
+            // pb_foto
+            // 
+            this.pb_foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_foto.Location = new System.Drawing.Point(485, 7);
+            this.pb_foto.Name = "pb_foto";
+            this.pb_foto.Size = new System.Drawing.Size(125, 125);
+            this.pb_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_foto.TabIndex = 17;
+            this.pb_foto.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.Location = new System.Drawing.Point(485, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Add Foto";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // F_NovoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 181);
+            this.ClientSize = new System.Drawing.Size(617, 199);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pb_foto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -251,6 +276,7 @@
             this.Text = "Novo Usuário";
             ((System.ComponentModel.ISupportInitialize)(this.n_nivel)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +302,7 @@
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Button btn_novo;
         private System.Windows.Forms.Button btn_fechar;
+        private System.Windows.Forms.PictureBox pb_foto;
+        private System.Windows.Forms.Button button1;
     }
 }
