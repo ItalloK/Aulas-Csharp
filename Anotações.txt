@@ -26,7 +26,7 @@ RowHeadersVisible -> False // desativa coluna da esquerda que ficava em nada den
 
 Modifiers // Troca o tipo da variavel de public para private ou protected...
 
-
+this.ControlBox = false; // remove o X para fechar janela
 
 
 
