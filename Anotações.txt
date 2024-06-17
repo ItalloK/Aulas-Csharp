@@ -1,3 +1,9 @@
+Comandos Compiler:
+
+csc: NomeDoArquivo.cs // compila e cria o .exe
+NomeDoArquivo // executa o .exe
+
+
 FormBorderStyle: FixedDialog // Impede de dimensionar o programa
 
 MaximizeBox : False // Desativa a maximização do programa
